@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * @file
+ * Contains drupal8learner.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function drupal8learner_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the poetic module.
+    case 'help.page.poetic':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('First Drupal 8 Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function drupal8learner_theme() {
+  $theme['drupal8learner_custom_page_render'] = [
+    'variables' => ['name' => NULL],
+    'template' => 'drupal8learner_custom_page_render'
+  ];
+
+  $theme['drupal8learner_custom_form_render'] = [
+    'variables' => ['first_name' => NULL, 'last_name' =>  NULL, 'biography' =>  NULL],
+    'template' => 'drupal8learner_custom_form_render'
+  ];
+  return $theme;
+}

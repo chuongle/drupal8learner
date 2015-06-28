@@ -1,0 +1,18 @@
+How to query blocks from custom block type
+
+$query = \Drupal::entityQuery('block_content')
+  ->condition('type', 'band');
+$ids = $query->execute();
+
+$blocks = entity_load_multiple('block_content', $ids);
+$view_mode = 'default';
+return $block ;
+
+How to load and render specific block from block_id
+$block = \Drupal\block\Entity\Block::load('block_id');
+$block_content = \Drupal::entityManager()
+  ->getViewBuilder('block')
+  ->view($block);
+
+return array('#markup' => drupal_render($block_content));
+

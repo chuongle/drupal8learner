@@ -1,0 +1,24 @@
+drupal8learner.hello:
+  path: '/drupal8learner/hello/{name}'
+  defaults:
+    _controller: '\Drupal\drupal8learner\Controller\DefaultController::hello'
+    _title: 'Drupal 8 Learner'
+  requirements:
+    _permission: 'access content'
+
+drupal8learner.greeting:
+  path: '/drupal8learner/greeting'
+  defaults:
+    _controller: '\Drupal\drupal8learner\Controller\DefaultController::greeting'
+    _title: 'Drupal 8 Learner'
+  requirements:
+    _permission: 'access content'
+
+drupal8learner.drupal8learner_form:
+  path: '/admin/config/drupal8learner/form'
+  defaults:
+    _form: '\Drupal\drupal8learner\Form\Drupal8LearnerForm'
+    _title: 'Drupal 8 Learner Form'
+  requirements:
+    _permission: 'access administration pages'
+
