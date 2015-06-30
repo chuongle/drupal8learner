@@ -1,6 +1,6 @@
 name: Drupal 8 Learner
 type: module
-description: First Drupal 8 Custom Module that provides a custom Block, Admin Form, and a greeting Page with custom twig template
+description: 'First Drupal 8 Custom Module that provides a custom Block, Admin Form, and a greeting Page with custom twig template'
 core: 8.x
 package: Other
 
